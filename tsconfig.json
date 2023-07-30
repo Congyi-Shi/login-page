@@ -8,11 +8,15 @@
     "experimentalDecorators": true,
     "strict": true,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true,
+    "allowJs": false,
+    "noEmit": true,
+    "noImplicitAny": false,
     "jsx": "react-jsx", // 这里改成react-jsx，就不需要在tsx文件中手动引入React了
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
     },
   },
-  "include": ["./src"]
+  "include": ["./src/*", "./src/**/*.ts", "./src/**/*.tsx", "./typings/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
