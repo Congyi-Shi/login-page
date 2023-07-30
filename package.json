@@ -1,6 +1,6 @@
 {
   "name": "react-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,8 @@
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,stylus,html,md}\"",
     "lint:md": "npx markdownlint --config .markdownlint.js --fix .",
     "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src --max-warnings=0",
+    "commit": "git pull --rebase && git add . && git cz && git push",
+    "release": "standard-version",
     "pre-check": "tsc && npx lint-staged"
   },
   "lint-staged": {
@@ -69,6 +71,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
+    "cz-cli": "^1.0.0",
     "cz-git": "^1.7.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -95,6 +98,7 @@
     "react-refresh": "^0.14.0",
     "sass-loader": "^13.3.2",
     "speed-measure-webpack-plugin": "^1.5.0",
+    "standard-version": "^9.5.0",
     "style-loader": "^3.3.3",
     "stylelint": "^15.10.2",
     "stylelint-config-css-modules": "^4.3.0",
