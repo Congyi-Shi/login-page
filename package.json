@@ -15,10 +15,11 @@
     "build:analy": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.analy.ts",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,stylus,html,md}\"",
     "lint:md": "npx markdownlint --config .markdownlint.js --fix .",
-    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src"
+    "lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src --max-warnings=0",
+    "pre-check": "tsc && npx lint-staged"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "src/**/*.{ts,tsx}":[
       "pnpm run lint:eslint",
       "pnpm run lint:prettier"
     ]
@@ -74,7 +75,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "glob-all": "^3.3.1",
     "html-webpack-plugin": "^5.5.3",
-    "husky": "^8.0.3",
     "less": "^4.1.3",
     "less-loader": "^11.1.3",
     "markdownlint-cli": "^0.35.0",
