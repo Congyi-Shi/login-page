@@ -1,35 +1,99 @@
-@color: red;
+@font-color: #888888;
 
-// @font-face {
-//     font-family: "GoldmanBold";
-//     src: local("GoldmanBold"),
-//      url("@/assets/fonts/Phudu-Bold.ttf") format("truetype");
-//     font-weight: bold;
-// }
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-left: 100px;
+  line-height: 80px;
+  font-size: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
 
-.lessBox {
-    .box {
-        color: @color;
-        background-color: lightblue;
-        // font-family: "GoldmanBold";
-        border-radius: 25px;
+.content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+}
 
-        &:before {
-            @arr: 'hello', 'world';
-            content: ` @{arr}.join(' ') .toUpperCase() `;
-        }
-    }
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+}
 
-    .smallImg {
-        width: 69px;
-        height: 75px;
-        transform: translate(100px, -100px);
-        background: url('@/assets/imgs/5kb_img.jpeg') no-repeat;
-    }
+.footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 80px;
+  line-height: 40px;
+  font-size: 16px;
+  border-top: 1px solid #ebebeb
+}
 
-    .bigImg {
-        width: 232px;
-        height: 154px;
-        background: url('@/assets/imgs/10kb_img.png') no-repeat;
-    }
+.button {
+  cursor: pointer;
+  padding: 5px 30px;
+  font-size: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  z-index: 9999; /* 确保弹窗在最上层 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.form-input {
+  width: 300px;
+  height: 32px;
+  padding: 4px 5px;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
 }
